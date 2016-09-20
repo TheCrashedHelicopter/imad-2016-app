@@ -5,9 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'firework.js'));
-});
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -21,6 +19,9 @@ app.get('/ui/itsme.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'itsme.jpg'));
 });
 
+app.get('/ui/firework.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'firework.js'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
