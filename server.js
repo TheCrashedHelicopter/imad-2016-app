@@ -16,7 +16,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/ui/itsme.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'itsme.jpg'));
+  res.sendFile(path.join(__dirname, 'ui', 'web.png'));
 });
 
 app.get('/ui/firework.js', function (req, res) {
